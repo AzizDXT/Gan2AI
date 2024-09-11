@@ -1,6 +1,3 @@
-Here's the updated `README.md` file for your `Gan2AI` project, which uses StyleGAN2 instead of StyleGAN3:
-
-```markdown
 # **Gan2AI: Image Generation Using StyleGAN2**
 
 ![Gan2AI Logo](https://raw.githubusercontent.com/AzizDXT/Gan2AI/main/LogoG2.png)

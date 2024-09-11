@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gan2AI - Image Generation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div id="logo-container">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Gan2AI Logo" id="logo">
+        </div>
+        <div id="header-text">
+            <h1>Gan2AI - Generate Stunning Images with StyleGAN2</h1>
+        </div>
+    </header>
+    <main>
+        <form id="generate-form" action="/generate" method="post">
+            <button type="submit" id="generate-button" class="glass-button">Generate Image</button>
+        </form>
+        <div id="status-message"></div>
+        {% if image_file %}
+            <div id="result">
+                <p>Image generated successfully! (Estimated time to complete: 10 seconds)</p>
+                <img src="{{ url_for('static', filename=image_file) }}" alt="Generated Image">
+                <a href="{{ url_for('download', filename=image_file) }}" download class="glass-button">Download Image</a>
+            </div>
+        {% endif %}
+    </main>
+    <script>
+        document.getElementById('generate-form').addEventListener('submit', function() {
+            const button = document.getElementById('generate-button');
+            const statusMessage = document.getElementById('status-message');
+            button.disabled = true;
+            button.innerHTML = 'Loading... Please wait';
+            statusMessage.innerHTML = 'Generating image...';
+        });
+    </script>
+</body>
+</html>

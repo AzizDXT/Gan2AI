@@ -3,7 +3,7 @@ import subprocess
 import requests
 
 def download_model():
-    url = 'https://api.ngc.nvidia.com/v2/models/org/nvidia/team/research/stylegan2/1/files?redirect=true&path=stylegan2-ffhqu-1024x1024.pkl'
+    url = 'https://api.ngc.nvidia.com/v2/models/org/nvidia/team/research/stylegan2/1/files?redirect=true&path=stylegan2-ffhq-256x256.pkl'
     model_dir = 'models'
     model_name = 'stylegan2.pkl'
     

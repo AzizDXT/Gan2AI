@@ -1,6 +1,5 @@
 numpy
 torch
-torchvision
 Pillow
 scipy
 click
@@ -9,3 +8,4 @@ requests
 flask
 matplotlib
 Image
+ninja
